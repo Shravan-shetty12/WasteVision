@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Waste Classifier</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 class="title">♻️ Smart Waste Classifier</h1>
+        <p class="subtitle">Upload an image or use live camera to classify waste in real-time</p>
+
+        <!-- Upload Section -->
+        <div class="card">
+            <h2>📤 Upload an Image</h2>
+            
+            <input type="file" id="upload" accept="image/*" class="file-input">
+            <button class="btn btn-upload" onclick="uploadImage()">Analyze Image</button>
+        </div>
+
+        <!-- Webcam Section -->
+        <div class="card">
+            <h2>🎥 Live Camera Detection</h2>
+
+            <div class="btn-row">
+                <button class="btn btn-start" onclick="startCamera()">Start Camera</button>
+                <button class="btn btn-stop" onclick="stopCamera()">Stop Camera</button>
+            </div>
+
+            <video id="webcam" autoplay class="video-box"></video>
+        </div>
+
+        <!-- Output Section -->
+        <div class="card">
+            <h2>🟩 Detection Output</h2>
+
+            <img id="output" class="output-img">
+
+            <h2 id="classname" class="detected-label">Detected: None</h2>
+        </div>
+
+    </div>
+
+</body>
+</html>
